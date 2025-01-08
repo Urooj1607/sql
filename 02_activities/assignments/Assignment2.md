@@ -53,8 +53,12 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
-```
+```  
 Your answer...
+ First architechture: This is a type 1 approach that allows overwriting. In this architecture, the customer_id serves as the primary key, and the address is stored in separate columns such as address_line, city, and postal_code. If a customer changes their address, any of these columns can be updated
+
+ Second architechture : This is a Type 2 approach that does not allow overwriting. In this architecture, an address_id is assigned to each address of a customer and is used as the primary key. Since every unique address is stored with its own address_id, this approach prevents overwriting and ensures that addresses are retained. 
+
 ```
 
 ***
